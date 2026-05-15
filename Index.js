@@ -1,19 +1,15 @@
-// const(constants)- variable that cannot be changed once you assign them.
-let PI = 3.14159;
-let radius;
-let circumference;
 
-document.addEventListener("DOMContentLoaded", function () {
+let username;
 
-    const PI = 3.14159;
 
-    document.getElementById("mySubmit").addEventListener("click", function () {
 
-        const radius = Number(document.getElementById("myText").value);
-        const circumference = 2 * PI * radius;
+document.getElementById("mySubmit").onclick = function() {
+    username = document.getElementById("myText").value;
+    console.log(username);
+    document.getElementById("myH1").textContent = `Hello ${username}`
+}
 
-        document.getElementById("myH3").textContent = circumference;
+/* 
+THE MOST BASIC WAY TO GET USER INPUT PROFESSIONALLY IS THROUGH THE PROMPT() FUNCTION. IT DISPLAYS A DIALOG BOX THAT PROMPTS THE USER FOR INPUT AND RETURNS THE INPUT AS A STRING.
+*/
 
-    });
-
-});
